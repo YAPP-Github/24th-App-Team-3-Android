@@ -1,20 +1,16 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.showpot.application)
 }
 
 android {
     namespace = "com.yapp.showpot"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.yapp.showpot"
-        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -28,13 +24,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -52,9 +41,5 @@ android {
 dependencies {
 
     implementation(project(":feature:home"))
-
-
-
-
 
 }
