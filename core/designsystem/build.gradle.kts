@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yapp.designsystem"
+    namespace = "com.alreadyoccupiedseat.designsystem"
     compileSdk = 34
 
     defaultConfig {

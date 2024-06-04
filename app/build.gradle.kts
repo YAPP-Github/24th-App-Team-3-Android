@@ -3,10 +3,10 @@ plugins {
 }
 
 android {
-    namespace = "com.yapp.showpot"
+    namespace = "com.alreadyoccupiedseat.showpot"
 
     defaultConfig {
-        applicationId = "com.yapp.showpot"
+        applicationId = "com.alreadyoccupiedseat.showpot"
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

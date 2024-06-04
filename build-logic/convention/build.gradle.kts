@@ -25,12 +25,12 @@ gradlePlugin {
 
         register("androidApplication") {
             id = "showpot.android.application"
-            implementationClass = "com.yapp.AndroidApplicationConventionPlugin"
+            implementationClass = "com.alreadyoccupiedseat.AndroidApplicationConventionPlugin"
         }
 
         register("androidLibrary") {
             id = "showpot.android.library"
-            implementationClass = "com.yapp.AndroidLibraryConventionPlugin"
+            implementationClass = "com.alreadyoccupiedseat.AndroidLibraryConventionPlugin"
         }
 
     }

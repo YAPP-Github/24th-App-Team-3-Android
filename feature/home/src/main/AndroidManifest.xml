@@ -3,7 +3,7 @@
 
     <application>
         <activity
-            android:name="com.yapp.home.MainActivity"
+            android:name="com.alreadyoccupiedseat.home.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

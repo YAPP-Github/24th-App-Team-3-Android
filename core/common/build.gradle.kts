@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yapp.common"
+    namespace = "com.alreadyoccupiedseat.common"
     compileSdk = 34
 
     defaultConfig {
