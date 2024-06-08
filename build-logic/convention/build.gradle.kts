@@ -18,6 +18,8 @@ tasks.withType<KotlinCompile>().configureEach {
 dependencies {
     compileOnly(libs.android.tools.build.gradle)
     compileOnly(libs.kotlin.gradle.plugin)
+    // compileOnly(libs.firebase.crashlytics)
+//    compileOnly(libs.plugins.gms)
 }
 
 gradlePlugin {
@@ -31,6 +33,11 @@ gradlePlugin {
         register("androidLibrary") {
             id = "showpot.android.library"
             implementationClass = "com.alreadyoccupiedseat.AndroidLibraryConventionPlugin"
+        }
+
+        register("androidFirebase") {
+            id = "showpot.android.firebase"
+            implementationClass = "com.alreadyoccupiedseat.AndroidFirebaseConventionPlugin"
         }
 
     }

@@ -18,6 +18,10 @@ room = "2.6.1"
 jetbrainsKotlinJvm = "1.9.0"
 appcompat = "1.6.1"
 material = "1.12.0"
+firebaseBom = "32.3.1"
+
+gmsPlugin = "4.4.0"
+firebaseCrashlyticsPlugin = "2.9.9"
 
 [libraries]
 android-tools-build-gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -50,6 +54,11 @@ androidx-room-paging = { group = "androidx.room", name = "room-paging", version.
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+# Firebase
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+
 [bundles]
 room = ["androidx-room-runtime", "androidx-room-compiler", "androidx-room-ktx", "androidx-room-testing", "androidx-room-paging"]
 
@@ -58,7 +67,10 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
 
 # Plugins defined by this project
 showpot-application = { id = "showpot.android.application", version = "unspecified" }
 showpot-library = { id = "showpot.android.library", version = "unspecified" }
+showpot-firebase = { id = "showpot.android.firebase", version = "unspecified" }

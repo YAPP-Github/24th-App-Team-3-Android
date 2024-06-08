@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.showpot.application)
+    alias(libs.plugins.showpot.firebase)
 }
 
 android {
