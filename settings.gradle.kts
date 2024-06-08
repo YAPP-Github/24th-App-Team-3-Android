@@ -22,9 +22,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "ShowPot"
 include(":app")
-include(":domain")
-include(":data")
 include(":feature:home")
 include(":feature:common")
 include(":core:common")
 include(":core:designsystem")
+include(":core:domain")
+include(":core:data")

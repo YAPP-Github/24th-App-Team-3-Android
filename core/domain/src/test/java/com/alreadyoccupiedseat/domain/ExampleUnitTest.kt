@@ -1,4 +1,4 @@
-package com.alreadyoccupiedseat.common
+package com.alreadyoccupiedseat.domain
 
 import org.junit.Test
 
