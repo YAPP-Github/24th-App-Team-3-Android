@@ -62,5 +62,5 @@ dependencies {
     implementation(libs.material)
 
     implementation(libs.androidx.hilt)
-    implementation(libs.coil)
+    implementation(libs.coil.kt.compose)
 }
