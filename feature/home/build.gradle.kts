@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -31,10 +32,6 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures { compose = true }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
-
 }
 
 dependencies {

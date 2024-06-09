@@ -4,7 +4,7 @@ compileSdk="34"
 minSdk="26"
 
 agp = "8.3.1"
-kotlin = "1.9.0"
+kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -18,9 +18,11 @@ jetbrainsKotlinJvm = "1.9.0"
 appcompat = "1.6.1"
 material = "1.12.0"
 firebaseBom = "32.3.1"
+ksp = "2.0.0-1.0.21"
 
 gmsPlugin = "4.4.0"
 firebaseCrashlyticsPlugin = "2.9.9"
+firebasePerfPlugin = "1.4.2"
 
 androidxComposeBom = "2024.05.00"
 androidxComposeCompiler = "1.5.8"
@@ -72,11 +74,12 @@ coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "
 # Hilt
 androidx-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt"}
 
-androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
-androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
-androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
-androidx-room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
-androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
+
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
@@ -84,9 +87,13 @@ material = { group = "com.google.android.material", name = "material", version.r
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "perf-plugin", version.ref = "firebasePerfPlugin" }
+
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+
 
 [bundles]
-room = ["androidx-room-runtime", "androidx-room-compiler", "androidx-room-ktx", "androidx-room-testing", "androidx-room-paging"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -95,8 +102,12 @@ jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrains
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+room = { id = "androidx.room", version.ref = "room" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 # Plugins defined by this project
 showpot-application = { id = "showpot.android.application", version = "unspecified" }
 showpot-library = { id = "showpot.android.library", version = "unspecified" }
 showpot-firebase = { id = "showpot.android.firebase", version = "unspecified" }
+showpot-room = { id = "showpot.android.room", version = "unspecified" }

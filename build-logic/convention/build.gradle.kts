@@ -16,10 +16,11 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
+    compileOnly(libs.room.gradlePlugin)
     compileOnly(libs.android.tools.build.gradle)
     compileOnly(libs.kotlin.gradle.plugin)
-    // compileOnly(libs.firebase.crashlytics)
-//    compileOnly(libs.plugins.gms)
+    compileOnly(libs.firebase.performance.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
 }
 
 gradlePlugin {
@@ -38,6 +39,11 @@ gradlePlugin {
         register("androidFirebase") {
             id = "showpot.android.firebase"
             implementationClass = "com.alreadyoccupiedseat.AndroidFirebaseConventionPlugin"
+        }
+
+        register("androidRoom") {
+            id = "showpot.android.room"
+            implementationClass = "com.alreadyoccupiedseat.AndroidRoomConventionPlugin"
         }
 
     }
