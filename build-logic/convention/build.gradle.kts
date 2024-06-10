@@ -46,5 +46,10 @@ gradlePlugin {
             implementationClass = "com.alreadyoccupiedseat.AndroidRoomConventionPlugin"
         }
 
+        register("androidHilt") {
+            id = "showpot.android.hilt"
+            implementationClass = "com.alreadyoccupiedseat.AndroidHiltConventionPlugin"
+        }
+
     }
 }

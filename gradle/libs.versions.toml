@@ -11,7 +11,7 @@ junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.8.0"
 activityCompose = "1.9.0"
-hilt = "1.0.0"
+hilt = "2.51"
 coil = "2.6.0"
 room = "2.6.1"
 jetbrainsKotlinJvm = "1.9.0"
@@ -73,6 +73,8 @@ coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "
 
 # Hilt
 androidx-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt"}
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
@@ -102,6 +104,7 @@ jetbrainsKotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrains
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 room = { id = "androidx.room", version.ref = "room" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
@@ -111,3 +114,4 @@ showpot-application = { id = "showpot.android.application", version = "unspecifi
 showpot-library = { id = "showpot.android.library", version = "unspecified" }
 showpot-firebase = { id = "showpot.android.firebase", version = "unspecified" }
 showpot-room = { id = "showpot.android.room", version = "unspecified" }
+showpot-hilt = { id = "showpot.android.hilt", version = "unspecified" }
