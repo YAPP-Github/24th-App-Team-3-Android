@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.showpot.library)
+    alias(libs.plugins.showpot.hilt)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.compose.compiler)
 }
@@ -56,6 +57,5 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
-    implementation(libs.androidx.hilt)
     implementation(libs.coil.kt.compose)
 }
