@@ -48,18 +48,6 @@ fun TypographyPreview() {
         }
 
         item {
-            ShowPotKoreanText_B1_Regular(text = "한국어 B1_Regular")
-        }
-
-        item {
-            ShowPotKoreanText_B2_Regular(text = "한국어 B2_Regular")
-        }
-
-        item {
-            ShowPotKoreanText_B3_Regular(text = "한국어 B3_Regular")
-        }
-
-        item {
             ShowPotKoreanText_B1_SemiBold(text = "한국어 B1_SemiBold")
         }
 
@@ -69,6 +57,18 @@ fun TypographyPreview() {
 
         item {
             ShowPotKoreanText_B3_SemiBold(text = "한국어 B3_SemiBold")
+        }
+
+        item {
+            ShowPotKoreanText_B1_Regular(text = "한국어 B1_Regular")
+        }
+
+        item {
+            ShowPotKoreanText_B2_Regular(text = "한국어 B2_Regular")
+        }
+
+        item {
+            ShowPotKoreanText_B3_Regular(text = "한국어 B3_Regular")
         }
 
         item {
