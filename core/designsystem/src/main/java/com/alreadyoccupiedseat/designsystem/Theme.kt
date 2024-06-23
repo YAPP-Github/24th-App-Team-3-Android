@@ -1,4 +1,4 @@
-package com.alreadyoccupiedseat.core.designsystem
+package com.alreadyoccupiedseat.designsystem
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme
