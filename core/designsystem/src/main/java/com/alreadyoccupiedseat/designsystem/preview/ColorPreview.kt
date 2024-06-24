@@ -16,10 +16,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.alreadyoccupiedseat.core.extention.toHexString
 import com.alreadyoccupiedseat.designsystem.ShowPotTheme
 import com.alreadyoccupiedseat.designsystem.ShowpotColor
 
@@ -31,7 +31,7 @@ fun ColorPreview() {
             .padding(16.dp)
     ) {
         item {
-            Text("확정 컬러", style = MaterialTheme.typography.headlineLarge)
+            Text("컬러 코드 값", style = MaterialTheme.typography.headlineLarge)
         }
         item {
             SectionTitle("Primary Brand Color")
@@ -119,12 +119,8 @@ fun ColorItem(colorName: String, color: Color) {
                 .background(color)
         )
         Text(text = colorName, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
-        Text(text = colorToHex(color), fontSize = 10.sp, modifier = Modifier.padding(top = 2.dp))
+        Text(text = color.toHexString(), fontSize = 10.sp, modifier = Modifier.padding(top = 2.dp))
     }
-}
-
-fun colorToHex(color: Color): String {
-    return String.format("0x%08X", color.toArgb())
 }
 
 @Preview(showBackground = true)
