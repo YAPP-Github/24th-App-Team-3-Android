@@ -20,25 +20,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.alreadyoccupiedseat.designsystem.ErrorRed
-import com.alreadyoccupiedseat.designsystem.Gray100
-import com.alreadyoccupiedseat.designsystem.Gray200
-import com.alreadyoccupiedseat.designsystem.Gray300
-import com.alreadyoccupiedseat.designsystem.Gray400
-import com.alreadyoccupiedseat.designsystem.Gray500
-import com.alreadyoccupiedseat.designsystem.Gray600
-import com.alreadyoccupiedseat.designsystem.Gray700
-import com.alreadyoccupiedseat.designsystem.Gray800
-import com.alreadyoccupiedseat.designsystem.Interpark
-import com.alreadyoccupiedseat.designsystem.MainBlue
-import com.alreadyoccupiedseat.designsystem.MainGreen
-import com.alreadyoccupiedseat.designsystem.MainRed
-import com.alreadyoccupiedseat.designsystem.MainYellow
-import com.alreadyoccupiedseat.designsystem.Melon
 import com.alreadyoccupiedseat.designsystem.ShowPotTheme
-import com.alreadyoccupiedseat.designsystem.Wemakeprice
-import com.alreadyoccupiedseat.designsystem.White
-import com.alreadyoccupiedseat.designsystem.YES24
+import com.alreadyoccupiedseat.designsystem.ShowpotColor
 
 @Composable
 fun ColorPreview() {
@@ -54,10 +37,10 @@ fun ColorPreview() {
             SectionTitle("Primary Brand Color")
             ColorSection(
                 listOf(
-                    "MainRed" to MainRed,
-                    "MainGreen" to MainGreen,
-                    "MainYellow" to MainYellow,
-                    "MainBlue" to MainBlue
+                    "MainRed" to ShowpotColor.MainRed,
+                    "MainGreen" to ShowpotColor.MainGreen,
+                    "MainYellow" to ShowpotColor.MainYellow,
+                    "MainBlue" to ShowpotColor.MainBlue
                 )
             )
         }
@@ -65,31 +48,31 @@ fun ColorPreview() {
             SectionTitle("Object, Line, Text Color")
             ColorSection(
                 listOf(
-                    "White" to White,
-                    "Gray100" to Gray100,
-                    "Gray200" to Gray200,
-                    "Gray300" to Gray300,
-                    "Gray400" to Gray400,
-                    "Gray500" to Gray500,
-                    "Gray600" to Gray600,
-                    "Gray700" to Gray700,
-                    "Gray800" to Gray800
+                    "White" to ShowpotColor.White,
+                    "Gray100" to ShowpotColor.Gray100,
+                    "Gray200" to ShowpotColor.Gray200,
+                    "Gray300" to ShowpotColor.Gray300,
+                    "Gray400" to ShowpotColor.Gray400,
+                    "Gray500" to ShowpotColor.Gray500,
+                    "Gray600" to ShowpotColor.Gray600,
+                    "Gray700" to ShowpotColor.Gray700,
+                    "Gray800" to ShowpotColor.Gray800
                 )
             )
         }
         item {
             SectionTitle("Error Color")
-            ColorSection(listOf("ErrorRed" to ErrorRed))
+            ColorSection(listOf("ErrorRed" to ShowpotColor.ErrorRed))
         }
 
         item {
             SectionTitle("Chip Color")
             ColorSection(
                 listOf(
-                    "YES24" to YES24,
-                    "Interpark" to Interpark,
-                    "Melon" to Melon,
-                    "Wemakeprice" to Wemakeprice
+                    "YES24" to ShowpotColor.YES24,
+                    "Interpark" to ShowpotColor.Interpark,
+                    "Melon" to ShowpotColor.Melon,
+                    "Wemakeprice" to ShowpotColor.Wemakeprice
                 )
             )
         }
@@ -103,7 +86,7 @@ fun SectionTitle(title: String) {
         style = MaterialTheme.typography.titleMedium,
         modifier = Modifier
             .padding(vertical = 8.dp)
-            .background(Gray100)
+            .background(ShowpotColor.Gray100)
     )
 }
 
