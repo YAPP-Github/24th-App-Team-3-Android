@@ -59,4 +59,6 @@ dependencies {
     implementation(libs.material)
 
     implementation(libs.coil.kt.compose)
+    implementation(libs.androidx.navigation.compose)
+
 }
