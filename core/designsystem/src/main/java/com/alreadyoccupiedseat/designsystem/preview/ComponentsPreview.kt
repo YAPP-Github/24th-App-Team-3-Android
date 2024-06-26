@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.alreadyoccupiedseat.designsystem.component.ShowPotMainButton
+import com.alreadyoccupiedseat.designsystem.component.ShowPotMainButtonWithPadding
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H0
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H1
 
@@ -44,6 +45,22 @@ fun ComponentsPreview() {
                 enabled = false,
                 onClicked = {}
             )
+            Spacer(modifier = Modifier.height(18.dp))
+        }
+
+        item {
+            ShowPotMainButtonWithPadding(
+                text = "enabled Main Button With Padding",
+                enabled = true,
+                onClicked = {})
+            Spacer(modifier = Modifier.height(18.dp))
+        }
+
+        item {
+            ShowPotMainButtonWithPadding(
+                text = "disabled Main Button With Padding",
+                enabled = false,
+                onClicked = {})
         }
 
     }
