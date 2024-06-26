@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            com.alreadyoccupiedseat.core.designsystem.ShowPotTheme {
+            com.alreadyoccupiedseat.designsystem.ShowPotTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -39,7 +39,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    com.alreadyoccupiedseat.core.designsystem.ShowPotTheme {
+    com.alreadyoccupiedseat.designsystem.ShowPotTheme {
         Greeting("Android")
     }
 }
