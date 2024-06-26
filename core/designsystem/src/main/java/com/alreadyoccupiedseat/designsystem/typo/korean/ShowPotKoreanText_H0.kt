@@ -2,6 +2,7 @@ package com.alreadyoccupiedseat.designsystem.typo.korean
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import com.alreadyoccupiedseat.designsystem.ShowPotTypography
 import com.alreadyoccupiedseat.designsystem.typo.ShowPotBaseText
 
@@ -9,8 +10,13 @@ import com.alreadyoccupiedseat.designsystem.typo.ShowPotBaseText
 fun ShowPotKoreanText_H0(
     text: String,
     color: Color = Color.Black,
+    maxLines: Int = Int.MAX_VALUE,
+    overflow: TextOverflow = TextOverflow.Clip,
 ) {
-    ShowPotBaseText(text = text, style = ShowPotTypography.Korean.H0.copy(
-        color = color
-    ))
+    ShowPotBaseText(
+        text = text,
+        style = ShowPotTypography.Korean.H0.copy(color = color),
+        maxLines = maxLines,
+        overflow = overflow
+    )
 }
