@@ -15,6 +15,7 @@ import com.alreadyoccupiedseat.design_app.Screen.Companion.bottomNavigationItems
 import com.alreadyoccupiedseat.design_app.screens.TypoScreen
 import com.alreadyoccupiedseat.design_app.screens.IconScreen
 import com.alreadyoccupiedseat.design_app.screens.ColorScreen
+import com.alreadyoccupiedseat.design_app.screens.ComponentsScreen
 import com.alreadyoccupiedseat.designsystem.component.ShowPotBottomNavigation
 
 @Composable
@@ -57,6 +58,10 @@ fun AppScreen() {
 
             composable(Screen.Color.route) {
                 ColorScreen(navController)
+            }
+
+            composable(Screen.Components.route) {
+                ComponentsScreen(navController)
             }
         }
     }

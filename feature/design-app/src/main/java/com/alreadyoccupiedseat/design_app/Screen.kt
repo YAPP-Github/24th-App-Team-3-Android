@@ -37,7 +37,14 @@ sealed class Screen(
         selectedIcon = R.drawable.ic_ticket_24_filled,
     )
 
+    data object Components : Screen(
+        route = "components",
+        title = "컴포넌트",
+        unSelectedIcon = R.drawable.ic_ticket_24,
+        selectedIcon = R.drawable.ic_ticket_24_filled,
+    )
+
     companion object {
-        val bottomNavigationItems = listOf(Typo, Icon, Color)
+        val bottomNavigationItems = listOf(Typo, Icon, Color, Components)
     }
 }
