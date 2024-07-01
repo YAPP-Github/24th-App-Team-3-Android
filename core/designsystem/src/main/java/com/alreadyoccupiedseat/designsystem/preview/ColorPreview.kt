@@ -1,11 +1,14 @@
 package com.alreadyoccupiedseat.designsystem.preview
 
+import android.widget.GridLayout.Spec
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -21,10 +24,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.max
 import androidx.compose.ui.unit.sp
 import com.alreadyoccupiedseat.core.extention.toHexString
 import com.alreadyoccupiedseat.designsystem.ShowPotTheme
 import com.alreadyoccupiedseat.designsystem.ShowpotColor
+import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_B3_Regular
+import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_B3_SemiBold
 
 @Composable
 fun ColorPreview() {
@@ -79,17 +85,6 @@ fun ColorPreview() {
 }
 
 @Composable
-fun SectionTitle(title: String) {
-    Text(
-        text = title,
-        style = MaterialTheme.typography.titleMedium,
-        modifier = Modifier
-            .padding(vertical = 8.dp)
-            .background(ShowpotColor.Gray100)
-    )
-}
-
-@Composable
 fun ColorItem(colorName: String, color: Color) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -101,20 +96,17 @@ fun ColorItem(colorName: String, color: Color) {
                 .size(48.dp)
                 .background(color)
         )
-        Text(
+        ShowPotKoreanText_B3_SemiBold(
             text = colorName,
+            color = color,
             maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.titleMedium.copy(
-                fontWeight = FontWeight.Bold,
-                fontSize = 8.sp,
-            )
+            overflow = TextOverflow.Ellipsis
         )
-        Text(
+        Spacer(modifier = Modifier.height(10.dp))
+        ShowPotKoreanText_B3_Regular(
             text = color.toHexString(),
             maxLines = 1,
-            overflow = TextOverflow.Ellipsis,
-            fontSize = 5.sp
+            overflow = TextOverflow.Ellipsis
         )
     }
 }
