@@ -44,7 +44,28 @@ fun ComponentsPreview() {
                 enabled = false,
                 onClicked = {}
             )
+            Spacer(modifier = Modifier.height(18.dp))
         }
-
+        item {
+            ShowPotMainButton(
+                modifier = Modifier.padding(
+                    top = 4.dp,
+                    bottom = 54.dp
+                ),
+                text = "enabled Main Button",
+                enabled = true,
+                onClicked = {})
+        }
+        item {
+            ShowPotMainButton(
+                modifier = Modifier
+                    .padding(
+                        top = 4.dp,
+                        bottom = 54.dp
+                    ),
+                text = "disabled Main Button With Padding",
+                enabled = false,
+                onClicked = {})
+        }
     }
 }
