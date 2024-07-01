@@ -15,13 +15,14 @@ import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H2
 
 @Composable
 fun ShowPotMainButton(
+    modifier: Modifier = Modifier,
     text: String,
     enabled : Boolean = true,
     onClicked: () -> Unit
 ) {
     Button(
         enabled = enabled,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .height(55.dp)
             .background(ShowpotColor.MainRed),
