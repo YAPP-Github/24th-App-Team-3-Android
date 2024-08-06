@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-
+    //
     implementation(project(":feature:home"))
     implementation(project(":feature:onboarding"))
     implementation(project(":feature:notification"))
@@ -49,10 +49,12 @@ dependencies {
     implementation(project(":feature:subscription-genre"))
     implementation(project(":feature:subscription-artist"))
     implementation(project(":feature:show-detail"))
+    implementation(project(":feature:myalarm"))
+    //
     implementation(project(":core:designsystem"))
     implementation(project(":core:common"))
     implementation(project(":core:notification"))
-
+    //
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
