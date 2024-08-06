@@ -21,6 +21,7 @@ import com.alreadyoccupiedseat.search.SearchScreen
 import com.alreadyoccupiedseat.show_detail.ShowDetailScreen
 import com.alreadyoccupiedseat.showpot.Screen
 import com.alreadyoccupiedseat.showpot.Screen.Companion.bottomNavigationItems
+import com.alreadyoccupiedseat.showpot.myalarm.MyAlarmScreen
 import com.alreadyoccupiedseat.subscription_genre.SubscriptionGenreScreen
 import com.alreadyoccupiedseat.subscription_artist.SubscriptionArtistScreen
 
@@ -108,6 +109,11 @@ fun AppScreenContent() {
             composable(Screen.ShowDetail.route) {
                 ShowDetailScreen(navController)
             }
+
+            composable(Screen.MyAlarm.route) {
+                MyAlarmScreen(navController)
+            }
+
         }
     }
 }
