@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.showpot.hilt)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -33,7 +35,11 @@ android {
 }
 
 dependencies {
-
+    //
+    implementation(project(":core:designsystem"))
+    implementation(project(":core:common"))
+    implementation(project(":model"))
+    //
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
