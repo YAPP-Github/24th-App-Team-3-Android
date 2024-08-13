@@ -103,7 +103,20 @@ fun AppScreenContent() {
             }
 
             composable(Screen.MyPage.route) {
-                MyPageScreen(navController)
+                MyPageScreen(
+                    onLoginClicked = {
+                        navController.navigate(Screen.Login.route)
+                    },
+                    onSettingClicked = {
+                        navController.navigate(Screen.MyAlarmSetting.route)
+                    },
+                    onFavoriteShowClicked = {
+
+                    },
+                    onFinishedShowClicked = {
+
+                    }
+                )
             }
 
             composable(Screen.Search.route) {
