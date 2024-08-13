@@ -37,6 +37,7 @@ android {
 dependencies {
 
     implementation(project(":core:designsystem"))
+    implementation(project(":model"))
 
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
