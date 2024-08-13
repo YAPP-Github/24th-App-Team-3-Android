@@ -48,7 +48,7 @@ fun MyPageScreen(
         onFavoriteShowClicked = {
 
         },
-        onCloseShowClicked = {
+        onFinishedShowClicked = {
 
         }
     )
@@ -61,7 +61,7 @@ fun MyPageScreenContent(
     onLoginClicked: () -> Unit,
     onSettingClicked: () -> Unit,
     onFavoriteShowClicked: () -> Unit,
-    onCloseShowClicked: () -> Unit,
+    onFinishedShowClicked: () -> Unit,
 ) {
     val viewModel = hiltViewModel<MyPageViewModel>()
     Scaffold(
@@ -110,7 +110,7 @@ fun MyPageScreenContent(
                         title = stringResource(R.string.close_ticketing_shows),
                         count = if (isLogin) 43 else 0
                     ) {
-                        onCloseShowClicked()
+                        onFinishedShowClicked()
                     }
                 }
 
