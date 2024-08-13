@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="my_page">마이</string>
+
     <string name="login_screen_message">잊지않고 내한공연 즐기러가요</string>
     <string name="button_login_with_kakao">카카오로 시작하기</string>
     <string name="button_login_with_google">Google로 시작하기 </string>
@@ -24,5 +26,13 @@
 
     <string name="action_subscribe_artist">아티스트 구독 하러가기</string>
     <string name="action_show_info">공연 정보 보러가기</string>
+
+    <!-- My Page  -->
+    <string name="favorite_shows">관심 공연</string>
+    <string name="close_ticketing_shows">티켓팅 종료 공연</string>
+
+    <!-- TEST  -->
+    <string name="test_of_my_page1"> 후 다채로운\n내한공연을 만나보세요.</string>
+    <string name="test_of_my_page2">%s님,\n안녕하세요!.</string>
 
 </resources>
