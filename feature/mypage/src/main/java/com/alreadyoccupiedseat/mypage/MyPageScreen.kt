@@ -145,7 +145,7 @@ fun WelcomeMessage(isLogin: Boolean, onActionMoveLogin: () -> Unit) {
     Spacer(modifier = Modifier.height(25.dp))
 
     if (isLogin) {
-        val nickName = "엶시히 하는 현수"
+        val nickName = "화이팅  현수"
         ShowPotKoreanText_H0(
             modifier = Modifier.padding(start = 16.dp),
             text = String.format(
