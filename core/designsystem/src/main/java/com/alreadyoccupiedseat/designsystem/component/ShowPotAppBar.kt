@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 fun ShowPotTopBar(
     title: @Composable () -> Unit = {},
     navigationIcon: @Composable (() -> Unit) = {},
+    endIcon: @Composable (() -> Unit) = {},
     backgroundColor: Color = Color.Transparent,
     contentColor: Color = contentColorFor(backgroundColor),
 ) {
@@ -38,6 +39,11 @@ fun ShowPotTopBar(
             ) {
                 navigationIcon()
                 title()
+            }
+            Box(
+                Modifier.align(Alignment.CenterEnd)  // Positioning the end icon
+            ) {
+                endIcon()  // Displaying the end icon
             }
         }
     }
