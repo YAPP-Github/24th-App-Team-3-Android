@@ -33,6 +33,6 @@
 
     <!-- TEST  -->
     <string name="test_of_my_page1"> 후 다채로운\n내한공연을 만나보세요.</string>
-    <string name="test_of_my_page2">%s님,\n안녕하세요!.</string>
+    <string name="test_of_my_page2">%s님,\n안녕하세요!</string>
 
 </resources>
