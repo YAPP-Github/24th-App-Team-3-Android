@@ -260,10 +260,11 @@ fun SubscriptionGenreContent(
                 }
             }
 
+            // TODO 진입 시, 그라데이션 높이 제대로 표기 안되는거 수정
             Spacer(
                 modifier = Modifier
+                    .fillMaxWidth()
                     .height(56.dp)
-                    .fillMaxSize()
                     .background(
                         brush = Brush.verticalGradient(
                             colors = listOf(
