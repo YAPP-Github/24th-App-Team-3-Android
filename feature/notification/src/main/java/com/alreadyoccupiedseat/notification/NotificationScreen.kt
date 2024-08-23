@@ -12,14 +12,26 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.alreadyoccupiedseat.designsystem.ShowpotColor
 import com.alreadyoccupiedseat.designsystem.component.IconMenuWithCount
 import com.alreadyoccupiedseat.designsystem.component.ticketSlider.TicketSlidePager
 import com.alreadyoccupiedseat.designsystem.typo.english.ShowPotEnglishText_H0
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H0
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H1
+
+@Preview
+@Composable
+fun PreviewNotificationScreen(modifier: Modifier = Modifier) {
+    val navController = rememberNavController()
+    NotificationScreen(
+        navController = navController,
+        onMyAlarmSettingClicked = {}
+    )
+}
 
 @Composable
 fun NotificationScreen(
