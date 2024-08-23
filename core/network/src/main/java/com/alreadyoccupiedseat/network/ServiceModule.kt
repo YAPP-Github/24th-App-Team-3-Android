@@ -15,4 +15,10 @@ class ServiceModule {
     fun provideArtistService(retrofit: Retrofit): ArtistService {
         return retrofit.create(ArtistService::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideLoginService(retrofit: Retrofit): LoginService {
+        return retrofit.create(LoginService::class.java)
+    }
 }

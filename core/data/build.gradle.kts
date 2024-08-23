@@ -41,6 +41,7 @@ dependencies {
     implementation(project(":core:notification"))
     implementation(project(":model"))
     implementation(project(":core:domain"))
+    implementation(project(":core:common"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

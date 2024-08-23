@@ -19,11 +19,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.alreadyoccupiedseat.designsystem.R
 import com.alreadyoccupiedseat.designsystem.ShowpotColor
@@ -33,8 +33,11 @@ import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H2
 
 @Composable
 fun LoginScreen(
-    navController: NavController
+//    navController: NavController,
+    onKakaoLoginSuccess: () -> Unit,
 ) {
+
+    val context = LocalContext.current
     val viewModel = hiltViewModel<LoginViewModel>()
     val event = viewModel.event.collectAsState()
 
@@ -48,7 +51,7 @@ fun LoginScreen(
         }
 
         is LoginScreenEvent.LoginCompleted -> {
-
+            onKakaoLoginSuccess()
         }
 
         is LoginScreenEvent.LoginError -> {
@@ -57,7 +60,9 @@ fun LoginScreen(
     }
 
     LoginContent(
-        onKakaoLoginClicked = viewModel::tryKakaoLogin
+        onKakaoLoginClicked = {
+            viewModel.tryKakaoLogin(context)
+        }
     )
 
 }

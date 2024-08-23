@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.alreadyoccupiedseat.showpot"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.alreadyoccupiedseat.showpot">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:minSdkVersion="33" />
+
     <application
         android:name=".ShowPotApplication"
         android:allowBackup="true"
@@ -18,7 +22,8 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="kakao${kakaoNativeAppKey}"/>
+            android:value="kakao${kakaoNativeAppKey}" />
+
         <activity
             android:name="com.alreadyoccupiedseat.showpot.MainActivity"
             android:exported="true">
@@ -34,13 +39,34 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakao${kakaoNativeAppKey}" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="delivery_metrics_exported_to_big_query_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel" />
+
+        <service
+            android:name=".ShowPotFcmService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

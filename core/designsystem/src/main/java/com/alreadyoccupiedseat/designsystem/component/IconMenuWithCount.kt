@@ -1,6 +1,5 @@
 package com.alreadyoccupiedseat.designsystem.component
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,16 +24,16 @@ fun IconMenuWithCount(
     modifier: Modifier = Modifier,
     firstIcon: Painter,
     title: String,
-    count: Int,
+    count: Int? = null,
     onClicked: () -> Unit = {}
 ) {
     Row(
-        modifier = modifier.fillMaxWidth()
-            .padding(start = 12.dp, end = 7.dp)
+        modifier = modifier
+            .fillMaxWidth()
             .clickable {
                 onClicked()
             }
-        ,
+            .padding(horizontal = 12.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
@@ -47,19 +46,22 @@ fun IconMenuWithCount(
         Spacer(Modifier.width(10.dp))
 
         ShowPotKoreanText_H1(
-            modifier = Modifier.weight(1f)
+            modifier = Modifier
+                .weight(1f)
                 .padding(vertical = 4.dp),
-            text =title,
+            text = title,
             color = ShowpotColor.Gray100,
         )
 
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
-            ShowPotKoreanText_B1_SemiBold(
-                text = count.toString(),
-                color = ShowpotColor.Gray100,
-            )
+            if (count != null) {
+                ShowPotKoreanText_B1_SemiBold(
+                    text = count.toString(),
+                    color = ShowpotColor.Gray100,
+                )
+            }
 
             Icon(
                 painter = painterResource(id = R.drawable.ic_arrow_24_right),
@@ -68,7 +70,6 @@ fun IconMenuWithCount(
                 modifier = Modifier.size(24.dp)
             )
         }
-
 
     }
 }

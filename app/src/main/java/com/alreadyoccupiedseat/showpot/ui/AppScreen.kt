@@ -17,24 +17,26 @@ import com.alreadyoccupiedseat.designsystem.ShowpotColor
 import com.alreadyoccupiedseat.designsystem.component.ShowPotBottomNavigation
 import com.alreadyoccupiedseat.home.HomeScreen
 import com.alreadyoccupiedseat.myalarm_setting.MyAlarmSettingScreen
-import com.alreadyoccupiedseat.login.LoginScreen
+import com.alreadyoccupiedseat.myfinished_show.MyFinishedShowScreen
 import com.alreadyoccupiedseat.mypage.MyPageScreen
 import com.alreadyoccupiedseat.notification.NotificationScreen
 import com.alreadyoccupiedseat.search.SearchScreen
+import com.alreadyoccupiedseat.settings.SettingsScreen
 import com.alreadyoccupiedseat.show_detail.ShowDetailScreen
 import com.alreadyoccupiedseat.showpot.Screen
 import com.alreadyoccupiedseat.showpot.Screen.Companion.bottomNavigationItems
-import com.alreadyoccupiedseat.subscription_genre.SubscriptionGenreScreen
 import com.alreadyoccupiedseat.subscription_artist.SubscriptionArtistScreen
+import com.alreadyoccupiedseat.subscription_genre.SubscriptionGenreScreen
+import com.alreadyoccupiedseat.withdraw.WithDrawScreen
 
 @Composable
-fun AppScreen() {
+fun AppScreen(isLoggedIn: Boolean) {
 
-    AppScreenContent()
+    AppScreenContent(isLoggedIn)
 }
 
 @Composable
-fun AppScreenContent() {
+fun AppScreenContent(isLoggedIn: Boolean) {
     val navController = rememberNavController()
     Scaffold(
         containerColor = ShowpotColor.Gray700,
@@ -73,10 +75,6 @@ fun AppScreenContent() {
             startDestination = Screen.Home.route,
             androidx.compose.ui.Modifier.padding(innerPadding),
         ) {
-
-            composable(Screen.Login.route) {
-                LoginScreen(navController)
-            }
 
             composable(Screen.Home.route) {
                 HomeScreen(
@@ -139,6 +137,16 @@ fun AppScreenContent() {
                 MyAlarmSettingScreen(navController)
             }
 
+            composable(Screen.Settings.route) {
+                SettingsScreen(navController)
+            }
+            composable(Screen.MyFinishedShow.route) {
+                MyFinishedShowScreen(navController)
+            }
+
+            composable(Screen.WithDraw.route) {
+                WithDrawScreen(navController)
+            }
         }
     }
 }

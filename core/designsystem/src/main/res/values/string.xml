@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="delete">삭제</string>
+
     <string name="my_page">마이</string>
 
     <string name="login_screen_message">잊지않고 내한공연 즐기러가요</string>
@@ -26,6 +29,13 @@
 
     <string name="action_subscribe_artist">아티스트 구독 하러가기</string>
     <string name="action_show_info">공연 정보 보러가기</string>
+
+    <!-- My Finished Show   -->
+    <string name="finished_show">티켓팅 종료 공연</string>
+
+    <!-- My Favorite Show   -->
+    <string name="favorite_show">관심 공연</string>
+    <string name="no_favorite_show">관심 공연이 없어요</string>
 
     <!-- My Page  -->
     <string name="favorite_shows">관심 공연</string>
