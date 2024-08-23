@@ -14,7 +14,10 @@ import com.alreadyoccupiedseat.designsystem.component.ShowPotTopBar
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H1
 
 @Composable
-fun MyPageTopBar(modifier: Modifier = Modifier) {
+fun MyPageTopBar(
+    modifier: Modifier = Modifier,
+    onSettingClicked: () -> Unit,
+) {
     ShowPotTopBar(
         title = {
             ShowPotKoreanText_H1(
@@ -26,7 +29,9 @@ fun MyPageTopBar(modifier: Modifier = Modifier) {
             )
         },
         endIcon = {
-            IconButton(onClick = { /*TODO*/ }) {
+            IconButton(onClick = {
+                onSettingClicked()
+            }) {
                 Icon(
                     tint = ShowpotColor.Gray400,
                     modifier = Modifier
