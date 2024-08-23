@@ -106,13 +106,13 @@ fun AppScreenContent(isLoggedIn: Boolean) {
                         navController.navigate(Screen.Login.route)
                     },
                     onSettingClicked = {
-                        navController.navigate(Screen.MyAlarmSetting.route)
+                        navController.navigate(Screen.Settings.route)
                     },
-                    onFavoriteShowClicked = {
-
+                    onMySubscribedArtistClicked = {
+                        // TODO 누락 화면 추가
                     },
-                    onFinishedShowClicked = {
-
+                    onMySubscribedGenreClicked = {
+                        navController.navigate(Screen.SubscriptionGenre.route)
                     }
                 )
             }
