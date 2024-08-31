@@ -20,7 +20,7 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,34 +37,39 @@ import com.alreadyoccupiedseat.designsystem.R
 import com.alreadyoccupiedseat.designsystem.ShowpotColor
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H0
 import com.alreadyoccupiedseat.designsystem.typo.korean.ShowPotKoreanText_H2
+import kotlinx.coroutines.flow.collectLatest
 import kotlin.math.absoluteValue
 
 @Composable
 fun OnboardingScreen(
-    onOnboardingCompleted: () -> Unit
+    onOnboardingCompleted: () -> Unit,
 ) {
 
     val viewModel = hiltViewModel<OnboardingViewModel>()
-    val event = viewModel.event.collectAsState()
+    LaunchedEffect(viewModel.event) {
+        viewModel.event.collectLatest { event ->
+            when (event) {
+                OnboardingScreenEvent.OnboardingCompleted -> {
+                    onOnboardingCompleted()
+                }
 
-    when (event.value) {
-        OnboardingScreenEvent.Idle -> {
-            OnboardingContent(
-                viewModel = viewModel,
-            )
-        }
+                else -> {
 
-        OnboardingScreenEvent.OnboardingCompleted -> {
-            onOnboardingCompleted()
+                }
+            }
         }
     }
+
+    OnboardingContent(
+        onOnboardingCompleted = { viewModel.completeOnboarding() }
+    )
 
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingContent(
-    viewModel: OnboardingViewModel,
+    onOnboardingCompleted: () -> Unit,
 ) {
 
     val pagerState = rememberPagerState(
@@ -159,7 +164,7 @@ fun OnboardingContent(
                         .height(55.dp)
                         .background(ShowpotColor.Gray700)
                         .clickable {
-                            viewModel.completeOnboarding()
+                            onOnboardingCompleted()
                         },
                     contentAlignment = Alignment.Center
                 ) {

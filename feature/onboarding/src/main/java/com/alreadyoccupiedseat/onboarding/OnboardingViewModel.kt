@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alreadyoccupiedseat.datastore.OnboardingDataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -25,7 +25,7 @@ class OnboardingViewModel @Inject constructor(
         }
     }
 
-    private var _event = MutableStateFlow<OnboardingScreenEvent>(OnboardingScreenEvent.Idle)
+    private var _event = MutableSharedFlow<OnboardingScreenEvent>()
     val event = _event
 
     fun completeOnboarding() {
